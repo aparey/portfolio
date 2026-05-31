@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parey Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
+      .w3-row-padding img {margin-bottom: 12px}
+      .w3-sidebar {width: 120px; background: #222;}
+      #main {margin-left: 120px}
+      @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
+  </head>
+<body class="w3-black">
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <img src="./CFD440A6-4F2E-4DFC-9C10-56B171C89BD2_1_201_a.jpeg" style="width:100%; border-radius: 50%; object-fit: cover;">
+
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="index.html#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PROJECTS</p>
+  </a>
+  <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="index.html#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+    <a href="index.html#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="projects">
+    <h1 class="w3-jumbo">My Projects</h1>
+    <p>Here are some of the projects I've worked on:</p>
+  </header>
+
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64">
+    <!-- Project 1 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <div class="w3-container">
+        <h3><b>Document based RAG chatbot</b></h3>
+        <h5>Machine Learning <span class="w3-opacity"></span></h5>
+      </div>
+      <div class="w3-container">
+        <p>This repository contains the implementation of a Document-Based Chatbot that uses a Retrieval-Augmented Generation (RAG) system to interact with multiple PDF documents. 
+          The system is developed using the LangChain framework and integrates state-of-the-art Large Language Models (LLMs) such as OpenAI's GPT and Mistral AI.</p>
+        <a href="https://github.com/aparey/RAG-chatbot-with-langchain" class="w3-button w3-black w3-margin-bottom">View Details</a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <div class="w3-container">
+        <h3><b>Molecular Similarity Calculator</b></h3>
+        <h5>End to end Web Application <span class="w3-opacity"></span></h5>
+      </div>
+      <div class="w3-container">
+        <p>Molecule Comparison: Compare two molecules using SMILES notation
+Multiple Similarity Methods:
+<li>Tanimoto Coefficient</li>
+<li>Dice Similarity</li>
+<li>Cosine Similarity</li>
+<li>Batch Comparison: Compare one molecule against multiple targets</li>
+<li>Molecular Visualization: 2D structure rendering using SmilesDrawer</li>
+<li>Comparison History: Track and export previous comparisons</li>
+<li>Responsive Design: Works seamlessly across devices</p></li>
+        <a href="https://github.com/aparey/molecular_similarity_calculator" class="w3-button w3-black w3-margin-bottom">View Details</a>
+      </div>
+    </div>
+
+          <!-- Project 3 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <div class="w3-container">
+        <h3><b>Pharmacy Assistant</b></h3>
+        <h5>Machine Learning <span class="w3-opacity"></span></h5>
+      </div>
+      <div class="w3-container">
+        <p>Handwritten Prescription Reading with Gemini Vision + LangGraph
+A Gradio application that uses Gemini Vision and LangChain agents to extract and process handwritten prescriptions.
+
+Features:
+<li>Vision Processing: Uses Gemini 1.5 Flash to extract prescription data from images</li>
+<li>Agent-based Processing: LangChain agents with tool calling for database operations</li>
+<li>Database Integration: SQLite database for pharmacy inventory management</li>
+<li>Real-time Stock Checking: Automatic inventory verification and updates</p></li>
+        <a href="https://huggingface.co/spaces/parey-a/pharmaassist" class="w3-button w3-black w3-margin-bottom">View Demo and Repository</a>
+      </div>
+    </div>
+
+    <!-- Add more projects as needed -->
+        <!-- Project 4 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <div class="w3-container">
+        <h3><b>Laboratory Sample Management System</b></h3>
+        <h5> React, Typescript <span class="w3-opacity"></span></h5>
+      </div>
+      <div class="w3-container">
+        <p>Built a comprehensive web-based laboratory management platform using React, TypeScript, and Tailwind CSS that enables scientists to efficiently track samples, manage experiments, and analyze results. The application features a modern, responsive design with dark mode support, interactive data visualizations using Chart.js, and advanced filtering capabilities. Key functionalities include complete sample lifecycle tracking, multi-type experiment workflows (cell studies, immune assays, PCR), real-time status monitoring, and automated insights dashboard. Implemented a clean component architecture with TypeScript for type safety, utilized React Router for seamless navigation, and created an intuitive user experience optimized for laboratory workflows. The project demonstrates proficiency in modern React development, data visualization, responsive design principles, and building production-ready applications for specialized scientific use cases.</p>
+        <a href="https://github.com/aparey/laboratory_management_system" class="w3-button w3-black w3-margin-bottom">View Details</a>
+      </div>
+    </div>
+
+    <!-- Add more projects as needed -->
+        <!-- Project 5 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <div class="w3-container">
+        <h3><b>Image Recognition</b></h3>
+        <h5> React, Typescript <span class="w3-opacity"></span></h5>
+      </div>
+      <div class="w3-container">
+        <p>The goal of this project is to create an efficient and accurate image recognition system. By utilizing convolutional neural networks (CNNs), the system learns to identify patterns and features within images, enabling it to categorize them appropriately. This approach is inspired by the human visual system and has been proven effective in various computer vision tasks.
+
+</p>
+        <a href="https://github.com/aparey/image-recognition-AI" class="w3-button w3-black w3-margin-bottom">View Details</a>
+      </div>
+    </div>
+
+
+  </div>
+
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <a href="https://www.facebook.com/aditya.parey" target="_blank">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    </a>
+    <a href="https://www.instagram.com/parey___/" target="_blank">
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+    </a>
+    <a href="https://twitter.com/PareyAditya/" target="_blank">
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/aditya-parey-a26392192/" target="_blank">
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </a>
+    <p class="w3-small">Let's catch up!</p>
+  </footer>
+</div>
+
+</body>
+</html>
