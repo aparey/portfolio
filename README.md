@@ -1,6 +1,10 @@
 # Personal Portfolio Website
 
+[![GitHub](https://img.shields.io/badge/repo-aparey%2Fportfolio-blue)](https://github.com/aparey/portfolio)
+
 A simple, responsive personal portfolio you can host for free. No build tools, frameworks, or backend required—just HTML, CSS from [W3.CSS](https://www.w3schools.com/w3css/), and a few CDN links for fonts and icons.
+
+**Repository:** [github.com/aparey/portfolio](https://github.com/aparey/portfolio)
 
 ## What you get
 
@@ -19,39 +23,49 @@ You do **not** need Node.js, Python, or any package manager.
 
 ## Quick start
 
-1. **Get the files**
+### Use this as your own site (recommended)
+
+1. **Fork the repository** on GitHub: open [aparey/portfolio](https://github.com/aparey/portfolio) and click **Fork**, or run:
+
+   ```bash
+   gh repo fork aparey/portfolio --clone
+   cd portfolio
+   ```
+
+2. **Clone your fork** (if you did not use `gh repo fork --clone`):
 
    ```bash
    git clone https://github.com/YOUR_USERNAME/portfolio.git
    cd portfolio
    ```
 
-   Or download the repository as a ZIP and unzip it.
+3. **Add your assets** (see [Assets](#assets)) — profile photo and resume PDF in the project root.
 
-2. **Add your assets** (see [Assets](#assets))
+4. **Customize content** — follow the [Customization guide](#customization-guide).
 
-   Place these in the project root (same folder as `index.html`):
-
-   | File | Purpose |
-   |------|---------|
-   | Your profile photo | Sidebar avatar and hero image |
-   | Your resume (PDF) | Download button on the home page |
-
-3. **Customize content** — follow [Customization guide](#customization-guide) below.
-
-4. **Preview locally**
+5. **Preview locally**
 
    - **Easiest:** double-click `index.html` to open it in your browser.
    - **Recommended:** use a local server so links behave like on a real site:
 
      ```bash
-     # Python 3
      python3 -m http.server 8000
      ```
 
      Then open [http://localhost:8000](http://localhost:8000).
 
-5. **Publish** — see [Deploy your site](#deploy-your-site).
+6. **Commit and push** to your fork, then [deploy](#deploy-your-site).
+
+### Clone the original repo directly
+
+If you only want a local copy without forking yet:
+
+```bash
+git clone https://github.com/aparey/portfolio.git
+cd portfolio
+```
+
+You can also download a ZIP from the repo’s **Code → Download ZIP** button.
 
 ## Project structure
 
@@ -76,7 +90,7 @@ Edit the HTML files in any text editor. Search for the example text and replace 
 
 ### 1. Page titles
 
-| File | Line to change | Example |
+| File | What to change | Example |
 |------|----------------|---------|
 | `index.html` | `<title>` in `<head>` | `Your Name Portfolio` |
 | `projects.html` | `<title>` in `<head>` | `Your Name — Projects` |
@@ -141,7 +155,15 @@ Shared styles live in the `<style>` block at the top of each file:
 
 The template expects files in the **project root**. If you rename them, update every `src` and `href` in `index.html` and `projects.html`.
 
-Example filenames from the original site (replace with yours):
+The live repo currently ships HTML only. Photo and resume are **not** committed yet—add yours locally, then push:
+
+```bash
+git add your-photo.jpg your-resume.pdf
+git commit -m "Add profile photo and resume"
+git push
+```
+
+Example filenames in the template (replace with yours):
 
 - Photo: `CFD440A6-4F2E-4DFC-9C10-56B171C89BD2_1_201_a.jpeg`
 - Resume: `Aditya_Parey_Resume_2025_DS1351.pdf`
@@ -160,18 +182,25 @@ The form posts to `/action_page.php`, which is a W3Schools placeholder and **wil
 
 Any host that serves static files works.
 
-### GitHub Pages
+### GitHub Pages (this repo)
 
-1. Push this folder to a GitHub repository.
-2. Go to **Settings → Pages**.
-3. Source: **Deploy from branch**, branch `main` (or `master`), folder `/ (root)`.
-4. Your site will be at `https://YOUR_USERNAME.github.io/REPO_NAME/`.
+1. Push your customized code to GitHub (your fork or `aparey/portfolio`).
+2. In the repository, go to **Settings → Pages**.
+3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+4. Choose branch **`main`**, folder **`/ (root)`**, then **Save**.
+5. After a minute or two, the site is live at:
 
-If the repo is named `YOUR_USERNAME.github.io`, the site is at `https://YOUR_USERNAME.github.io/`.
+   **`https://YOUR_USERNAME.github.io/portfolio/`**
+
+   For example, after enabling Pages on a fork owned by `jane`:
+
+   `https://jane.github.io/portfolio/`
+
+   If the repository is renamed to `YOUR_USERNAME.github.io`, the site is served at `https://YOUR_USERNAME.github.io/` with no `/portfolio` path.
 
 ### Netlify / Vercel / Cloudflare Pages
 
-1. Sign up and connect your GitHub repo (or drag-and-drop the folder on Netlify).
+1. Sign up and **Import** the GitHub repo [aparey/portfolio](https://github.com/aparey/portfolio) (or your fork).
 2. Build command: leave empty. Publish directory: `/` (root).
 3. Deploy.
 
@@ -183,6 +212,18 @@ If the repo is named `YOUR_USERNAME.github.io`, the site is at `https://YOUR_USE
 
 After deploying, open your live URL and click through Home, Projects, About, and Contact to confirm links and assets load.
 
+## Updating your site after changes
+
+```bash
+cd portfolio
+# edit index.html, projects.html, or add assets
+git add .
+git commit -m "Update portfolio content"
+git push
+```
+
+GitHub Pages redeploys automatically when you push to the branch configured in Pages settings.
+
 ## Checklist before you go live
 
 - [ ] Replaced all personal text (name, bio, skills, contact)
@@ -192,6 +233,7 @@ After deploying, open your live URL and click through Home, Projects, About, and
 - [ ] Projects page lists your real work with correct URLs
 - [ ] Tested on phone or narrow browser window (mobile nav)
 - [ ] Removed or replaced any content you do not want public
+- [ ] Enabled GitHub Pages (or another host) and verified the live URL
 
 ## Troubleshooting
 
@@ -200,7 +242,8 @@ After deploying, open your live URL and click through Home, Projects, About, and
 | Broken images | Check filename and path match exactly (case-sensitive on many hosts) |
 | Sidebar overlaps content on mobile | Normal below 600px width; mobile top bar should appear |
 | Projects link goes nowhere | Use `./projects.html` from `index.html` and `index.html` from `projects.html` |
-| Resume download 404 | Put the PDF in the repo root and match the `href` filename |
+| Resume download 404 | Put the PDF in the repo root, commit, push, and match the `href` filename |
+| Pages shows 404 | Confirm Pages uses branch `main` and root `/`; wait a few minutes after first enable |
 
 ## License
 
@@ -209,3 +252,5 @@ Use this template freely for your own portfolio. If you fork or share it, a cred
 ## Credits
 
 Layout inspired by [W3.CSS Portfolio Template](https://www.w3schools.com/w3css/tryw3css_templates_dark_portfolio.htm). Built with W3.CSS, Google Fonts, and Font Awesome.
+
+Maintained by [@aparey](https://github.com/aparey).
